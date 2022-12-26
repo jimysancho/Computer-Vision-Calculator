@@ -1,5 +1,7 @@
 # Computer Vision Calculator
 
+Using the MNIST dataset for the digits model, and the letter data set: https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format for the letter model, train my own implementation of a deep neural network to recognize the single elements of a system of linear equations to solve it. 
+
 ## 1. Requirements
 
 In order for this application to work, the photo must have the next **format**: 
