@@ -79,3 +79,4 @@ Even though the results are not very accurate for a task like this (with a `Baye
 
 2. Our models work so the only thing we need to be worried about is to get data from the same distribution. 
 
+3. The letter model works perfectly. It has a simple explanation: since we knew beforehand that the system of linear equations would be of 3 equations (3 not known variables), we do not need to train the neural network over the hole alphabet dataset, only in the letters that appear in our equations. If the sytem has 6 different letters, the neural network should be trained on those letters to improve efficiency and accuracy. 
