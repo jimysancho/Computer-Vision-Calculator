@@ -42,3 +42,34 @@ Using only erosion and dilation over the area we got in the section 2.1, we obta
 Once we have each equation (and its correspondent coordinates), we can again apply erosion and dilation over that equation's area to obtain the single characters that then will be fed to the neural network: 
 
 ![Getting Started](./images/single_equation.png)
+
+## 3. Prediction
+
+Once we have the window in which the single characters are in one equation, we have to format this images so we can feed them to the different neural networks models in order to make predictions. Both the MNIST digits and the letter digits are images with shape: (28, 28)
+whose pixels take values: [0, 1]. In order to get a nice figure of the single characters we will apply: 
+
+1. Bounding box. To center the digits. 
+2. Padding. To have some margin on the bordes of the digits. 
+3. Bool values. The  pixels of the pad image can only take values of 0 or 1. 
+
+The result of this process: 
+
+![Getting Started](./images/single_number.png)
+
+If we look at the image of the 2.4 Section we can a see a huge difference between the number 1 detected on that image and the processed one. 
+This is the image we will fed into our models. The same applies to the letter images. 
+
+### 3.1 Algebraic predictions
+
+In order to make predictions over the algebraic symbols, we make a function that computes the number of components an image has.
+
+1. Equal sign. The number of labels (without considering the background) is 2. 
+2. Plus sign and minus sing. The number of labels (without considering the background) is 1. Because of the preprocess of the images to make them have the correct format so we can feed them to the models, the plus sign will maintain its original form, whereas the minus sign will be much bigger. That is why we define a threshold area to distinguish one from another. 
+
+![Getting Started](./images/algebra_prediction.png)
+
+
+## 4. Results
+
+![Getting Started](./images/results.png)
+
