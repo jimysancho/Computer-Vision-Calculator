@@ -77,5 +77,5 @@ Even though the results are not very accurate for a task like this (with a `Baye
 
 1. The clarity of the single elements is fundamental in order to predict correctly. The MNIST dataset is one of the cleanest datasets out there and the characters we get from each equation are not from the same distribution. 
 
-2. Our models works so the only thing we need to be worried about is to get data from the same distribution. 
+2. Our models work so the only thing we need to be worried about is to get data from the same distribution. 
 
